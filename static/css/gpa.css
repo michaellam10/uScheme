@@ -1,0 +1,17 @@
+body {
+  background: url("http://i.imgur.com/HH04KH2.jpg");
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Exo', sans-serif;
+  font-size: 100px;
+  margin-top: 10%; margin-left: 10%; margin-right: 10%;
+  margin-bottom: 2%;
+}
+
+.MyClass {
+  list-style-type: none;
+}
