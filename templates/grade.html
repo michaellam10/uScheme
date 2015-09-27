@@ -6,50 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>GPA calculator</title>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//bootswatch.com/cosmo/bootstrap.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{ url_for('static', filename='css/grade-style.css')}}" rel="stylesheet" type="text/css" />
   </head>
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-5">
+      <div class="tabs-left">
+        <ul class="nav nav-tabs">
+          <li><a href="#b" data-toggle="tab">Projects</a></li>
+          <li><a href="#c" data-toggle="tab">Homeworks</a></li>
+          <li class="active"><a href="#a" data-toggle="tab"><span class="glyphicon glyphicon-plus"></span></a></li>
+
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="a">
+            <ul class="list-group pull-left">
+              <li class="list-group-item">
+                <form method="put" id ="gradeForm">
+                      <input type="text" name="type" id="project-name" placeholder="project-name">
+                      <input type="text" name="dueDate" id="" placeholder="due-date">
+                      <input type="text" name="grade" id="grade" placeholder="grade">
+                      <button type="button"><i class="fa fa-plus-circle"></i></button>
+                    </form>
+              </li>
+            </ul>
+          </div>
+        </div><!-- /tab-content -->
+      </div><!-- /tabbable -->
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /container -->
+
   <body>
 
-    <!-- HEADER -->
-    <header>
-        <div>
-            <nav class='navigation'>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
 
-                    <li>
-                        <a href="/schedule">Schedule</a>
-                    </li>
-                    <li>
-                        <a href="/grade">Grade</a>
-                    </li>
 
-                </ul>
-            </nav>
-
-        </div>
-    </header>
-    <!-- END HEADER -->
-
-    <!-- Page Content -->
-    <div>
-
-  <form method="put" id ="gradeForm">
-    <input type="text" name="course-name" id="course-name" placeholder="course name"> <input type="submit" value="Submit" id="">
-    <br>
-    <input type="text" name="type" id="" placeholder="type">
-    <input type="text" name="percentage" id="" placeholder="percentage">
-    <input type="text" name="grade" id="" placeholder="grade">
-
-  </form>
-
+  <!--
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Homeworks</h3>
     </div>
+    <div class="panel-body">
+          <div>
+    
+      <form method="put" id ="gradeForm">-->
+        <!--<input type="text" name="course-name" id="course-name" placeholder="course name"> <input type="submit" value="Submit" id="">
+        <br>-->
+  <!--
+        <input type="text" name="type" id="" placeholder="homework-name">
+        <input type="text" name="dueDate" id="" placeholder="due-date">
+        <input type="text" name="grade" id="" placeholder="grade">
+        <button type="button"><i class="fa fa-plus-circle"></i></button>
+      </form>
 
+      </div>
+      </div>
+    </div>
+-->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
