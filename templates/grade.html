@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>GPA calculator</title>
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='css/grade-style.css')}}" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <header>
+        <div>
+            <nav class='navigation'>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="/schedule">Schedule</a>
+                    </li>
+                    <li>
+                        <a href="/grade">Grade</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- Page Content -->
+    <div>
+
+  <form method="put" id ="gradeForm">
+    <input type="text" name="course-name" id="course-name" placeholder="course name"> <input type="submit" value="Submit" id="">
+    <br>
+    <input type="text" name="type" id="" placeholder="type">
+    <input type="text" name="percentage" id="" placeholder="percentage">
+    <input type="text" name="grade" id="" placeholder="grade">
+
+  </form>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/calculator.js')}}" type="text/javascript"></script>
+  </body>
+</html>

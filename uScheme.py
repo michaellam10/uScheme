@@ -5,6 +5,10 @@ app = Flask(__name__)
 def index():
     return render_template('homepage.html')
 
+@app.route('/grade')
+def grade():
+    return render_template('grade.html')
+'''
 @app.route('/schedule')
 def schedule():
     return render_template('schedule.html')
@@ -17,9 +21,9 @@ def map():
 def myclass():
     return render_template('class.html')
 
-@app.route('/grade-gpa-prediction')
+@app.route('/gpa')
 def grade():
-    return render_template('grade.html')
-
+    return render_template('gpa.html')
+'''
 if __name__ == '__main__':
     app.run(debug=True)
