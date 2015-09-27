@@ -58,14 +58,15 @@ def gpa():
 
 		return render_template('gpa.html', gpa=gpa)
 	return render_template('gpa.html')
+
+@app.route('/map')
+def map():
+	return render_template('maps.html')
 '''
 @app.route('/schedule')
 def schedule():
 	return render_template('schedule.html')
 
-@app.route('/map')
-def map():
-	return render_template('map.html')
 
 @app.route('/class')
 def myclass():
